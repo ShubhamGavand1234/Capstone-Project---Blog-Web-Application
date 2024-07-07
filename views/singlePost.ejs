@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+<body>
+  <%- include("partials/navbar.ejs")%>
+  <div class="singlePost">
+    <h1><%= singlePost.title %></h1>
+    <p>ID: <%= singlePost.id %></p>
+    <p>Author: <%= singlePost.author %></p>
+    <p><%= singlePost.description %></p>
+  </div>
+
+  <a href="/home">Back to Home</a>
+</body>

@@ -1,0 +1,22 @@
+// // {
+// //   "emmet.includeLanguages": {
+// //     "ejs": "html"
+// //   },
+// //   "html.autoClosingTags": false,
+// //   "emmet.showAbbreviationSuggestions": false,
+// //   "[ejs]": {
+// //     "editor.quickSuggestions": false
+// //   }
+// // }
+
+
+// {
+//   "emmet.includeLanguages": {
+//     "ejs": "html"
+//   },
+//   "html.autoClosingTags": false,
+//   "emmet.showAbbreviationSuggestions": false,
+//   "[html]": {
+//     "editor.quickSuggestions": false
+//   }
+// }

@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.LandingPage {
+  background-image: url("/images/CoverPage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  z-index: -3;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(0, 0, 0, 0.5); Black overlay with 50% opacity */
+  pointer-events: none; /* Allow clicks to pass through the overlay */
+  z-index: -2;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 50px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+.nav-menu {
+  display: block;
+  width: 40%;
+}
+.navbar-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hero-text {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  color: white;
+}
+
+.hero-text-items {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.caption {
+  display: inline-block;
+  position: relative;
+  z-index: 2; /* Ensure caption is above the overlay */
+  padding: 20px;
+  /* Semi-transparent background for the caption */
+  border-radius: 10px;
+  /* box-shadow:  Box shadow for the caption */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.paragraph {
+  margin-bottom: 50px;
+}
+
+.explore {
+  height: 40px;
+  width: 80px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: darkgrey;
+  color: black;
+}
+
+.explore a {
+  text-decoration: none;
+  color: black;
+}
+
+.mainPost {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  margin: 50px;
+}
+
+.postCard {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+  height: 25%;
+  width: 80%;
+  overflow: hidden;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.singlePost {
+  background-color: burlywood;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  margin-top: 50px;
+}

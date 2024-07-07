@@ -1,0 +1,46 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+  <%- include("partials/navbar.ejs")%>
+  <div class="mainPost">
+    <% PostArry.forEach(element => { %>
+    <div class="post postCard">
+      <h4>
+        <a href="post/<%=element.id %>"> <%= element.title %> </a>
+        (ID: <%= element.id %>)
+      </h4>
+      <p class="description"><%= element.description %></p>
+      <div class="buttons">
+        <button onclick="deletePost('<%= element.id %>')">Delete</button>
+        <button onclick="editPost('<%= element.id %>')">Edit</button>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+
+  <script>
+    function deletePost(postID) {
+      fetch(`/delete/${postID}`, {
+        method: "DELETE",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            alert("Item deleted successfully");
+            window.location.reload();
+          } else {
+            alert("Failed to delete item: " + data.message);
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("An error occurred while deleting the item");
+        });
+    }
+    function editPost(postID) {
+      fetch(`/edit/${postID}`, {
+        method: "PATCH",
+      }).then(console.log("clicked"));
+    }
+  </script>
+</body>
